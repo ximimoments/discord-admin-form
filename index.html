@@ -18,7 +18,7 @@
     <div class="form-container">
       <form action="#" method="POST">
         <label for="username">Discord Username:</label>
-        <input type="text" id="username" name="username" placeholder="e.g. pepe#1234" required />
+        <input type="text" id="username" name="username" placeholder="e.g. username123" required />
 
         <label for="experience">Do you have moderation experience?</label>
         <select id="experience" name="experience" required>
@@ -26,6 +26,9 @@
           <option value="yes">Yes</option>
           <option value="no">No</option>
         </select>
+
+        <label for="bots">Do you have experience with moderation bots? Which ones?</label>
+        <textarea id="bots" name="bots" rows="2" required></textarea>
 
         <label for="motivation">Why do you want to be an admin?</label>
         <textarea id="motivation" name="motivation" rows="3" required></textarea>
@@ -37,9 +40,8 @@
           <option value="no">No</option>
         </select>
 
-        <!-- Nuevo campo agregado aquí -->
-        <label for="availability">Available for emergencies?</label>
-        <select id="availability" name="availability" required>
+        <label for="responsibility">Are you willing to take admin responsibilities?</label>
+        <select id="responsibility" name="responsibility" required>
           <option value="">Select</option>
           <option value="yes">Yes</option>
           <option value="no">No</option>
