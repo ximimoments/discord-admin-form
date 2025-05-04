@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Únete como Admin - Servidor Discord</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="banner">
+      <img src="Welcome!(1).png" alt="Bienvenida al servidor">
+      <h1>¡Te estamos buscando!</h1>
+      <p>¿Quieres ser parte del equipo de admins/mods de nuestro servidor?</p>
+      <p>Completa el formulario y postúlate ahora.</p>
+    </div>
+
+    <div class="form-container">
+      <form action="#" method="POST">
+        <label for="username">Usuario en Discord:</label>
+        <input type="text" id="username" name="username" placeholder="Ej: pepe#1234" required />
+
+        <label for="experience">¿Tienes experiencia moderando?</label>
+        <select id="experience" name="experience" required>
+          <option value="">Selecciona</option>
+          <option value="si">Sí</option>
+          <option value="no">No</option>
+        </select>
+
+        <label for="motivation">¿Por qué quieres ser admin?</label>
+        <textarea id="motivation" name="motivation" rows="3" required></textarea>
+
+        <label for="rules">¿Aceptarás y harás cumplir las reglas?</label>
+        <select id="rules" name="rules" required>
+          <option value="">Selecciona</option>
+          <option value="si">Sí</option>
+          <option value="no">No</option>
+        </select>
+
+        <button type="submit">Enviar solicitud</button>
+      </form>
+    </div>
+
+    <div class="server-links">
+      <p>Únete a nuestro servidor oficial:</p>
+      <a href="https://discord.gg/NdrnGFajAk" target="_blank">Servidor Oficial</a>
+
+      <p>Si eres admin, accede al servidor solo para admins:</p>
+      <a href="https://discord.gg/prwxStrnA2" target="_blank">Servidor Solo para Admins</a>
+    </div>
+  </div>
+</body>
+</html>
