@@ -16,9 +16,9 @@
     </div>
 
     <div class="form-container">
-      <form action="https://formspree.io/f/mwpolyzr" method="POST">
+      <form action="#" method="POST">
         <label for="username">Discord Username:</label>
-        <input type="text" id="username" name="username" placeholder="e.g. username" required />
+        <input type="text" id="username" name="username" placeholder="e.g. pepe#1234" required />
 
         <label for="experience">Do you have moderation experience?</label>
         <select id="experience" name="experience" required>
@@ -26,9 +26,6 @@
           <option value="yes">Yes</option>
           <option value="no">No</option>
         </select>
-
-        <label for="bots">Do you have experience with moderation bots? Which ones?</label>
-        <textarea id="bots" name="bots" rows="2" required></textarea>
 
         <label for="motivation">Why do you want to be an admin?</label>
         <textarea id="motivation" name="motivation" rows="3" required></textarea>
@@ -40,14 +37,13 @@
           <option value="no">No</option>
         </select>
 
-        <label for="time">How much time do you spend on Discord each day?</label>
-        <input type="text" id="time" name="time" required />
-
-        <label for="platforms">Do you have experience with other moderation platforms or bots?</label>
-        <textarea id="platforms" name="platforms" rows="2" required></textarea>
-
-        <label for="harassment">What would you do if a member feels harassed by another?</label>
-        <textarea id="harassment" name="harassment" rows="3" required></textarea>
+        <!-- Nuevo campo agregado aquí -->
+        <label for="availability">Available for emergencies?</label>
+        <select id="availability" name="availability" required>
+          <option value="">Select</option>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
 
         <button type="submit">Submit Application</button>
       </form>
