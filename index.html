@@ -16,7 +16,7 @@
     </div>
 
     <div class="form-container">
-      <form action="#" method="POST">
+      <form action="https://formspree.io/f/mwpolyzr" method="POST">
         <label for="username">Discord Username:</label>
         <input type="text" id="username" name="username" placeholder="e.g. username123" required />
 
@@ -24,14 +24,29 @@
         <select id="experience" name="experience" required>
           <option value="">Select</option>
           <option value="yes">Yes</option>
-          <option value="no">No</option>
+          <option value="no">No, I'm new to being an admin</option>
         </select>
 
         <label for="bots">Do you have experience with moderation bots? Which ones?</label>
         <textarea id="bots" name="bots" rows="2" required></textarea>
 
+        <label for="conflicts">Have you had conflicts in other servers? How did you handle them?</label>
+        <textarea id="conflicts" name="conflicts" rows="2" required></textarea>
+
+        <label for="repeated">What would you do if a user repeatedly breaks a minor rule?</label>
+        <textarea id="repeated" name="repeated" rows="2" required></textarea>
+
+        <label for="friendrule">What would you do if a friend breaks a server rule?</label>
+        <textarea id="friendrule" name="friendrule" rows="2" required></textarea>
+
         <label for="motivation">Why do you want to be an admin?</label>
         <textarea id="motivation" name="motivation" rows="3" required></textarea>
+
+        <label for="dailyuse">How much time do you spend on Discord each day?</label>
+        <input type="text" id="dailyuse" name="dailyuse" required />
+
+        <label for="harassment">What would you do if a member feels harassed by another?</label>
+        <textarea id="harassment" name="harassment" rows="2" required></textarea>
 
         <label for="rules">Will you accept and enforce the rules?</label>
         <select id="rules" name="rules" required>
