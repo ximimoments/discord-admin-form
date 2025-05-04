@@ -3,58 +3,84 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Join as Admin - Discord Server</title>
+  <title data-i18n="title">Join as Admin - Discord Server</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div class="language-switcher">
+    <label for="language"><span data-i18n="language">🌐 Language:</span></label>
+    <select id="language">
+      <option value="es">Español</option>
+      <option value="en" selected>English</option>
+      <option value="it">Italiano</option>
+      <option value="pt">Português</option>
+      <option value="ru">Русский</option>
+    </select>
+    
   <div class="container">
     <div class="banner">
-      <img src="Welcome!(1).png" alt="Welcome to the server">
-      <h1>We are looking for you!</h1>
-      <p>Want to be part of our admin/mod team?</p>
-      <p>Fill out the form and apply now.</p>
+      <img src="Welcome!(1).png" alt="" />
+      <h1 data-i18n="heading">We are looking for you!</h1>
+      <p data-i18n="p1">Do you want to be part of our server's admin/mod team?</p>
+      <p data-i18n="p2">Fill out the form and apply now.</p>
     </div>
 
     <div class="form-container">
-      <form action="https://formspree.io/f/mwpolyzr" method="POST">
-        <label for="username">Discord Username:</label>
+      <form action="#" method="POST">
+        <label for="username" data-i18n="username_label">Discord Username:</label>
         <input type="text" id="username" name="username" placeholder="e.g. pepe" required />
 
-        <label for="experience">Do you have moderation experience?</label>
+        <label for="experience" data-i18n="experience_label">Do you have moderation experience?</label>
         <select id="experience" name="experience" required>
-          <option value="">Select</option>
-          <option value="yes">Yes</option>
-          <option value="no">No</option>
+          <option value="select" data-i18n="select_option">Select</option>
+          <option value="yes" data-i18n="yes_option">Yes</option>
+          <option value="no" data-i18n="no_option">No</option>
         </select>
 
-        <label for="motivation">Why do you want to be an admin?</label>
+        <label for="motivation" data-i18n="motivation_label">Why do you want to be an admin?</label>
         <textarea id="motivation" name="motivation" rows="3" required></textarea>
 
-        <label for="rules">Will you enforce the rules?</label>
-        <select id="rules" name="rules" required>
-          <option value="">Select</option>
-          <option value="yes">Yes</option>
-          <option value="no">No</option>
+        <label for="emergencies" data-i18n="emergencies_label">Available for emergencies?</label>
+        <select id="emergencies" name="emergencies" required>
+          <option value="select" data-i18n="select_option">Select</option>
+          <option value="yes" data-i18n="yes_option">Yes</option>
+          <option value="no" data-i18n="no_option">No</option>
         </select>
-
-        <label for="emergency">Available for emergencies?</label>
-        <select id="emergency" name="emergency" required>
-          <option value="">Select</option>
-          <option value="yes">Yes</option>
-          <option value="no">No</option>
+        <label for="languages" data-i18n="languages_label">Which official server languages do you speak?</label>
+        <select id="languages" name="languages" required>
+          <option value="" data-i18n="select_option">Select</option>
+          <option value="english" data-i18n="english">English</option>
+          <option value="spanish" data-i18n="spanish">Spanish</option>
+          <option value="italian" data-i18n="italian">Italian</option>
+          <option value="portuguese" data-i18n="portuguese">Portuguese</option>
+          <option value="russian" data-i18n="russian">Russian</option>
+          <option value="multiple" data-i18n="multiple">More than one</option>
+          <option value="none" data-i18n="none">None</option>
         </select>
+        
+        <label for="language"><span data-i18n="language_label">Language:</span></label>
+        <select id="language">
+          <option value="en" selected>English</option>
+          <option value="es">Español</option>
+          <option value="it">Italiano</option>
+          <option value="pt">Português</option>
+          <option value="ru">Русский</option>
+        </select>
+        
 
-        <button type="submit">Submit Application</button>
+        <button type="submit" data-i18n="submit_btn">Submit Application</button>
       </form>
     </div>
 
     <div class="server-links">
-      <p>Join our official server:</p>
-      <a href="https://discord.gg/NdrnGFajAk" target="_blank">Official Server</a>
+      <p data-i18n="join_server">Join our official server:</p>
+      <a href="https://discord.gg/NdrnGFajAk" target="_blank" data-i18n="official_server">Official Server</a>
 
-      <p>If you're an admin, access the admin-only server:</p>
-      <a href="https://discord.gg/prwxStrnA2" target="_blank">Admin-Only Server</a>
+      <p data-i18n="admin_server">If you're an admin, access the admin-only server:</p>
+      <a href="https://discord.gg/prwxStrnA2" target="_blank" data-i18n="admin_only">Admin-Only Server</a>
     </div>
   </div>
+
+  <script src="translate.js"></script>
 </body>
 </html>
