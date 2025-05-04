@@ -4,9 +4,52 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title data-i18n="title">Join as Admin - Discord Server</title>
+
+  <!-- Icono para la pestaña -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
   <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Animación de carga */
+    .loading {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+    .loading .spinner {
+      border: 8px solid #f3f3f3;
+      border-top: 8px solid #7289da;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: spin 2s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    /* Estilo del cuerpo cuando la página está cargando */
+    body.loading-page {
+      overflow: hidden;
+    }
+  </style>
 </head>
-<body>
+<body class="loading-page">
+  <!-- Animación de carga -->
+  <div class="loading" id="loading-screen">
+    <div class="spinner"></div>
+  </div>
+
+  <!-- Language Selector -->
   <div class="language-switcher">
     <label for="language"><span data-i18n="language">🌐 Language:</span></label>
     <select id="language">
@@ -16,17 +59,18 @@
       <option value="pt">Português</option>
       <option value="ru">Русский</option>
     </select>
-    
+  </div>
+
   <div class="container">
     <div class="banner">
-      <img src="Welcome!(1).png" alt="" />
+      <img src="Welcome!(1).png" alt="Welcome Image" />
       <h1 data-i18n="heading">We are looking for you!</h1>
       <p data-i18n="p1">Do you want to be part of our server's admin/mod team?</p>
       <p data-i18n="p2">Fill out the form and apply now.</p>
     </div>
 
     <div class="form-container">
-      <form action="#" method="POST">
+      <form action="https://formspree.io/f/mwpolyzr" method="POST">
         <label for="username" data-i18n="username_label">Discord Username:</label>
         <input type="text" id="username" name="username" placeholder="e.g. pepe" required />
 
@@ -46,6 +90,7 @@
           <option value="yes" data-i18n="yes_option">Yes</option>
           <option value="no" data-i18n="no_option">No</option>
         </select>
+
         <label for="languages" data-i18n="languages_label">Which official server languages do you speak?</label>
         <select id="languages" name="languages" required>
           <option value="" data-i18n="select_option">Select</option>
@@ -57,16 +102,6 @@
           <option value="multiple" data-i18n="multiple">More than one</option>
           <option value="none" data-i18n="none">None</option>
         </select>
-        
-        <label for="language"><span data-i18n="language_label">Language:</span></label>
-        <select id="language">
-          <option value="en" selected>English</option>
-          <option value="es">Español</option>
-          <option value="it">Italiano</option>
-          <option value="pt">Português</option>
-          <option value="ru">Русский</option>
-        </select>
-        
 
         <button type="submit" data-i18n="submit_btn">Submit Application</button>
       </form>
@@ -81,6 +116,16 @@
     </div>
   </div>
 
+  <!-- JavaScript for Language Translation and Loading Screen -->
   <script src="translate.js"></script>
+  <script>
+    // Eliminar la animación de carga después de que el contenido esté completamente cargado
+    window.onload = () => {
+      const loadingScreen = document.getElementById("loading-screen");
+      const body = document.body;
+      loadingScreen.style.display = "none";  // Ocultar la pantalla de carga
+      body.classList.remove("loading-page");  // Permitir desplazamiento de la página
+    };
+  </script>
 </body>
 </html>
